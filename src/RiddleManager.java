@@ -9,38 +9,38 @@ import java.util.Scanner;
 
 public class RiddleManager {
 
-    public static final String FILE = "riddles.txt";
+	public static final String FILE = "riddles.txt";
 
-    private List<Riddle> riddles;
+	private List<Riddle> riddles;
 
-    public RiddleManager() {
-        try {
-            Scanner file = new Scanner(new File(FILE));
-            int count = 1;
-            while (file.hasNextLine()) {
-                String riddle = file.nextLine();
-                String answer = file.nextLine();
-                riddles.add(new Riddle(riddle, answer, count));
-                count++;
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+	public RiddleManager() {
+		try {
+			Scanner file = new Scanner(new File(FILE));
+			int count = 1;
+			while (file.hasNextLine()) {
+				String riddle = file.nextLine();
+				String answer = file.nextLine();
+				riddles.add(new Riddle(riddle, answer, count));
+				count++;
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
-    public String getRiddle() {
-        int rand = (int) (Math.random() * this.riddles.size());
-        return this.getRiddle(rand);
-    }
+	public String getRiddle() {
+		int rand = (int) (Math.random() * this.riddles.size());
+		return this.getRiddle(rand);
+	}
 
-    public String getRiddle(int riddleNumber) {
-        if (riddleNumber < 0 || riddleNumber >= this.riddles.size()) {
-            throw new IllegalArgumentException("Number is invalid");
-        }
-        return this.riddles.get(riddleNumber).toString();
-    }
+	public String getRiddle(int riddleNumber) {
+		if (riddleNumber < 0 || riddleNumber >= this.riddles.size()) {
+			throw new IllegalArgumentException("Number is invalid");
+		}
+		return this.riddles.get(riddleNumber).toString();
+	}
 
-    public int numberOfRiddles() {
-        return this.riddles.size();
-    }
+	public int numberOfRiddles() {
+		return this.riddles.size();
+	}
 }
