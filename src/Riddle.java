@@ -28,4 +28,10 @@ public class Riddle {
     public int getNumber() {
         return this.number;
     }
+
+    public String toString() {
+        return "Riddle:\t" + this.riddle + "\n" +
+                "Answer:\t" + this.answer + "\n" +
+                "Riddle number:\t" + this.number;
+    }
 }
