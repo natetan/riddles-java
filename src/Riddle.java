@@ -10,7 +10,7 @@ public class Riddle {
     private String riddle;
     private String answer;
     private int number;
-    
+
     public Riddle(String riddle, String answer, int number) {
         this.riddle = riddle;
         this.answer = answer;
