@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -14,6 +15,7 @@ public class RiddleManager {
 	private List<Riddle> riddles;
 
 	public RiddleManager() {
+		this.riddles = new ArrayList<>();
 		try {
 			Scanner file = new Scanner(new File(FILE));
 			int count = 1;
