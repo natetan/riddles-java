@@ -6,6 +6,6 @@ public class RiddleMain {
 
 	public static void main(String[] args) {
 		RiddleManager manager = new RiddleManager();
-		System.out.println("Getting riddle: " + manager.getRiddle());
+		System.out.println(manager.getRiddle());
 	}
 }
