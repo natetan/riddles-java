@@ -1,5 +1,8 @@
 # Riddler (Java)
+
 ## Java Version of [Riddler](https://github.com/yulongtan/riddler.git)
+
+### Just testing if riddles work in prep for Android riddle app
 
 ### Standard Format of Riddles
 ```
