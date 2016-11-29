@@ -1,19 +1,25 @@
+/**
+ * Yulong Tan
+ * 11.28.16
+ *
+ * RiddleManager reads riddles from a text file and loads them for use
+ */
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * Created by yulong on 11/26/16.
- */
-
 public class RiddleManager {
 
+	// File to use
 	public static final String FILE = "riddles.txt";
 
+	// Stores the riddles
 	private List<Riddle> riddles;
 
+	// Reads the riddles from a text file and stores it
 	public RiddleManager() {
 		this.riddles = new ArrayList<>();
 		try {
